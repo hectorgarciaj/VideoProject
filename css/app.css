@@ -1,114 +1,158 @@
-.stil {
-  font-family: verdana;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-}
-.center{
-  text-align: center;
-}
-.mdl-data-table{
-    padding: 0 18px 12px 18px;
-    text-align: center;
-}
-.test1 {
-  font-family: verdana;
-  font-size: 18px;
-  color: rgba(0, 0, 0, .26);
-  font-weight: bold;
-}
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-.progress {
-  background-color: #f3f3f3;
-  border: 0;
-  height: 18px;
-  border-radius: 9px;
-  width: 600px;
-  display: table;
-  margin: auto;
-  margin-top: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: #000;
+  background: #34abfa;
+  padding-top: 5%;
+  font-size: 5px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
-  transition: 1s opacity;
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.stopfade {
-  opacity: .5;
+.iphone {
+  position: relative;
+  background: #202020;
+  width: 45%;
+  height: 0;
+  padding-top: 95%;
+  margin: 0 auto;
+  border-radius: 3em;
 }
-/*TEST ESTILS NO ACABATS PROGRESS BAR :SSSS♥*/
-progress[value]::-webkit-progress-value {
-        background-image:
-          -webkit-linear-gradient(
-            -45deg,
-            transparent 33%, rgba(0, 0, 0, .1) 33%,
-            rgba(0, 0, 0, .1) 66%, transparent 66%
-          ),
-          -webkit-linear-gradient(
-            top,
-            rgba(255, 255, 255, .25),
-            rgba(0, 0, 0, .25)
-          ),
-          -webkit-linear-gradient(left, #335EC4, #1F71F4);
- 
-        border-radius: 50px;
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-      }
-      progress::-webkit-progress-bar {
-        background-image:
-          -webkit-linear-gradient(
-            -45deg,
-            transparent 33%, rgba(0, 0, 0, .1) 33%,
-            rgba(0, 0, 0, .1) 66%, transparent 66%
-          ),
-          -webkit-linear-gradient(
-            top,
-            rgba(255, 255, 255, .25),
-            rgba(0, 0, 0, .25)
-          ),
-          -webkit-linear-gradient(left, #333, #666);
-        border-radius: 50px;
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-      }
-      body {
-        overflow: hidden;
-        width: 98%;
-        height: 98%;
-      }
-      hidden {
-        display: none;
-      }
-      progress {
-        width: 100%;
-        -webkit-appearance: none;
-      }
-      .td-center  {
-        text-align: center;
-      }
-      .td-right {
-        text-align: right;
-      }
-      .center-div  {
-        width: 100%;
-        padding: 25% 0;
-      }
-      div {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: large;
-        font-weight: bold;
-      }
+
+.power {
+  position: absolute;
+  background: #202020;
+  width: 13%;
+  height: .5%;
+  top: -.5%;
+  right: 12%;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.lock {
+  position: absolute;
+  background: #202020;
+  width: 1%;
+  height: 5%;
+  top: 12.5%;
+  left: -1%;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+.volume {
+  position: absolute;
+  background: #202020;
+  width: 1%;
+  height: 4%;
+  top: 23%;
+  left: -1%;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+.volume.down{ top: 31%; }
+
+.camera {
+  position: absolute;
+  top: 4%;
+  left: 48.5%;
+  background: #3f3f3f;
+  width: 3%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 50%;
+}
+
+.speaker {
+  position: absolute;
+  top: 7%;
+  left: 42.5%;
+  background: #3f3f3f;
+  width: 15%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 1em;
+}
+
+.appleicon {
+  padding-top: 25%;
+  opacity: 0;
+  animation: unhide 5s infinite alternate;
+}
+
+.appleicon img{
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  opacity: 0;
+  font-size: 1.25rem;
+  text-align: center;
+  animation: unhide 5s infinite alternate;
+}
+
+.screen {
+  background: #2f2f2f;
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  top: 12.5%;
+  left: 5%;
+  animation: lighten 5s infinite alternate;
+}
+
+.button {
+  position: absolute;
+  bottom: 2.75%;
+  left: 42.5%;
+  background: #3f3f3f;
+  /* border: 1px solid #3f3f3f; */
+  width: 15%;
+  height: 0;
+  padding-top: 15%;
+  border-radius: 50%;
+}
+
+.square {
+  position: absolute;
+  top: 27.5%;
+  left: 27.5%;
+  border: 2px solid #d7d7d7;
+  border-radius: .3em;
+  width: 45%;
+  height: 45%;
+}
+
+@media screen and (min-width: 28em ) {
+  body{ font-size: 8px; }
+}
+
+@media screen and (min-width: 34em ) {
+  body{ font-size: 10px; }
+}
+
+@media screen and (min-width: 48em ) {
+  body{ font-size: 14px; }
+}
+
+@keyframes lighten {
+  0%, 45% { background: #2f2f2f; }
+  65%, 100% { background: #f7f7f7; }
+}
+
+@keyframes unhide {
+  0%, 55% { opacity: 0 }
+  75%, 100% { opacity: 1 }
+}
